@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>login</title>
+    <link rel="stylesheet" href="index.css">
+    <script>
+        function validate()
+        {
+            var x=document.getElementById("uname").value;
+            a=/^[a-zA-Z]+$/;
+            if(x.match(a)){
+                return "USER NAME IS VALID"
+            }else{
+                alert("INVALID USER NAME or PASSWORD")
+            }
+
+        }
+        function password()
+        {
+            var x=document.getElementById("pname").value;
+            a=/^[0-9]+$/;
+            if(x.match(a)){
+                alert("VALID DATA")
+            }else{
+                alert("INVALID USER NAME or PASSWORD")
+            }
+
+        }
+    </script>
+  </head>
+  <body class="login">
+    <center>
+      <label>Enter Your UserName: </label>
+      <input type="text" name="UserName" size="30px;" id="uname" onfocusout="validate()"/>
+      <br><br>
+      <label>Enter Your Password: </label>
+      <input type="password" name="password" size="30px;" id="pname" onfocusout="password()"/>
+      <br><br>
+      <input type="button" value="Submit">
+      <br><br>
+      <a href="forgot.html">Forgot Password</a>
+      <br></br>
+      <a href="reg.html">Sign Up</a>
+    </center>
+    
+  </body>
+</html>
